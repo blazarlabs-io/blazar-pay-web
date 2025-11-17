@@ -1,49 +1,48 @@
 import Section from "./Section";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <Section id="home" className="pt-20">
-      <div className="grid lg:grid-cols-2 gap-10 items-center">
+    <Section id="home" paddingX="px-0" className="relative overflow-hidden pt-6 ">
+      {/* White bottom half */}
+      <div className="absolute inset-x-0 bottom-0 h-[28%] bg-white -z-10" />
 
-        {/* Text */}
-        <div>
-          <p className="text-teal-500 font-semibold uppercase tracking-wide">
-            Crypto payments
+      {/* Content wrapper */}
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-10">
+        {/* Text block */}
+        <div className="relative z-10 max-w-md">
+          <p className="text-[#00E6C8] font-medium text-[32px] sm:text-[37px] leading-[40px] sm:leading-[44px] tracking-wide">
+            You can pay here
+            <br />
+            with crypto using
           </p>
 
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mt-2">
-            You can pay here with crypto using{" "}
-            <span className="text-teal-500">Blazar Pay</span>
-          </h1>
-
-          <p className="mt-4 text-slate-600 max-w-prose">
-            Download the app, connect your wallet, and hold your phone near the
-            terminal to complete the payment.
-          </p>
-
-          <div className="mt-6 flex gap-4 flex-wrap">
-            <a
-              href="#download"
-              className="rounded-2xl bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-3"
-            >
-              Download App
-            </a>
-
-            <a
-              href="#how-it-works"
-              className="rounded-2xl border border-slate-300 hover:bg-slate-100 px-6 py-3 font-semibold"
-            >
-              How it works
-            </a>
+          <div className="mt-5">
+            <Image
+              src="/nav-logo-green-white.svg"
+              alt="Blazar Pay logo"
+              width={210}
+              height={70}
+              priority
+            />
           </div>
         </div>
 
-        {/* Image */}
-        <div className="flex justify-center">
-          <img
+        {/* Device image */}
+        <div
+          className="
+            flex justify-center w-full
+            lg:mt-0
+            lg:absolute lg:right-0 lg:bottom-[-40px] lg:translate-x-1/4
+          "
+        >
+          <Image
             src="/device_terminal.png"
             alt="Blazar terminal"
-            className="w-full max-w-md h-auto rounded-2xl shadow-xl"
+            width={480}
+            height={320}
+            className="w-full lg:w-[460px] h-auto mr-[-48px]"
+            priority
           />
         </div>
       </div>
