@@ -1,20 +1,35 @@
 import Section from "@/components/Section";
+import Image from "next/image";
 
-
-export default function DownloadBanner() {
+export default function DownloadSection() {
   return (
-  <Section id="download">
-    <div className="rounded-3xl bg-slate-900 text-white p-8 sm:p-12 grid lg:grid-cols-2 gap-8 items-center shadow">
-      <div>
-        <h2 className="text-3xl font-bold tracking-tight">Ready to pay with crypto?</h2>
-        <p className="mt-2 text-slate-300">Download the app to get started in minutes.</p>
-        <div className="mt-6 flex gap-3 flex-wrap">
-          <a href="/download" className="rounded-2xl bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-3">Download App</a>
-          <a href="/how-it-works" className="rounded-2xl bg-white/10 hover:bg-white/20 px-6 py-3 font-semibold">How it works</a>
-        </div>
+    <Section id="download" paddingX="px-0" className="w-full bg-white mt-[-2px] pt-[22px]">
+      {/* Text */}
+      <div className="text-left px-[25px]">
+        <p className="text-[22px] font-medium leading-[26px] text-[#1A1A1A]">
+          Download the app, connect your wallet, and hold your phone near the
+          terminal to complete the payment.
+        </p>
       </div>
-      <img src="/phone-terminal.jpg" alt="Phone near terminal" className="w-full h-auto rounded-2xl" />
-    </div>
-  </Section>
+
+      {/* Button */}
+      <div className="mt-[75px] flex justify-center">
+        <button className="px-10 py-[20px] text-[31px] leading-[37px] font-medium text-[#2C2D38] rounded-full bg-[#00E6C8] hover:opacity-90 transition">
+          Download App
+        </button>
+      </div>
+
+      {/* Full-width image */}
+      <div className="w-full">
+        <Image
+          src="/bl-pay-image1.jpg" 
+          alt="Download app usage"
+          width={1600}
+          height={1000}
+          className="w-full h-auto object-cover"
+          priority
+        />
+      </div>
+    </Section>
   );
 }

@@ -2,16 +2,23 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import MobileNav from "./MobileNav";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur bg-white/70 border-b">
-      <div className="container-px max-w-screen h-16 flex items-center justify-between">
-        <Link href="/" className="font-black text-xl tracking-tight">
-          Blazar <span className="text-teal-500">pay</span>
+    <header className="sticky top-0 z-40 bg-[#2C2D38] ">
+      <div className="px-[25px] py-[20px] max-w-screen flex items-center justify-between">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/nav-logo-green-white.svg"
+            alt="Blazar Pay logo"
+            width={122} 
+            height={40} 
+            priority
+          />
         </Link>
 
         {/* desktop nav */}
@@ -29,7 +36,7 @@ export default function Header() {
             href="#merchant"
             className="inline-flex rounded-xl bg-slate-900 text-white px-4 py-2"
           >
-            Accept crypto
+            Download App
           </Link>
         </nav>
 
@@ -43,12 +50,23 @@ export default function Header() {
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
+            fill="#00E6C8"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M3 6h18M3 12h18M3 18h18" />
+            {/* row 1 */}
+            <circle cx="4" cy="4" r="2.5" />
+            <circle cx="12" cy="4" r="2.5" />
+            <circle cx="20" cy="4" r="2.5" />
+
+            {/* row 2 */}
+            <circle cx="4" cy="12" r="2.5" />
+            <circle cx="12" cy="12" r="2.5" />
+            <circle cx="20" cy="12" r="2.5" />
+
+            {/* row 3 */}
+            <circle cx="4" cy="20" r="2.5" />
+            <circle cx="12" cy="20" r="2.5" />
+            <circle cx="20" cy="20" r="2.5" />
           </svg>
         </button>
       </div>

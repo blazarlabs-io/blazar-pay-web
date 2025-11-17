@@ -25,13 +25,7 @@ export default function MobileNav({
         <Link href="#contact" onClick={onClose}>
           Contact
         </Link>
-        <Link
-          href="#merchant"
-          className="rounded-xl bg-slate-900 text-white px-4 py-2 w-fit"
-          onClick={onClose}
-        >
-          Accept crypto
-        </Link>
+        
       </nav>
     </div>
   );
