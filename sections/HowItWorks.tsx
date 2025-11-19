@@ -106,7 +106,7 @@ export default function HowItWorksSection() {
             </div>
 
             {/* Text */}
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <p className=" text-[21px] leading-[24px] font-medium text-[#2C2D38]">
                 {step.text}
               </p>

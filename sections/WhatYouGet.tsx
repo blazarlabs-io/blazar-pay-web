@@ -5,20 +5,20 @@ const items = [
   {
     text: "Pay directly with your crypto – no card needed.",
     icon: "/icons/tokens.svg",
-    height: '138',
-    width: '124',
+    height: '124',
+    width: '138',
   },
   {
     text: "Confirmation in seconds, right at the counter.",
     icon: "/icons/confirmation.svg",
-    height: '183',
-    width: '107',
+    height: '107',
+    width: '183',
   },
   {
     text: "Keep control: you approve every payment before it’s sent.",
     icon: "/icons/control.svg",
-    height: '101',
-    width: '125',
+    height: '125',
+    width: '101',
   },
 ];
 
@@ -26,7 +26,7 @@ export default function WhatYouGetSection() {
   return (
     <Section
       id="what-you-get"
-      className="w-full bg-[#1A1A1A] pt-[40px] pb-[60px]"
+      className="w-full bg-[#2d2d38] pt-[40px] pb-[60px]"
     >
       {/* Title */}
       <h2 className="text-[37px] font-medium text-[#00E6C8]">
@@ -34,18 +34,18 @@ export default function WhatYouGetSection() {
       </h2>
 
       {/* Blocks */}
-      <div className="flex flex-col gap-[27px] mt-[50px] px-[70px]">
+      <div className="flex flex-col lg:flex-row gap-[27px] mt-[50px] px-[70px] lg:px-0 justify-between">
         {items.map((item, index) => (
           <div
             key={index}
-            className="bg-[#2C2D38] rounded-[20px] px-[30px] py-[40px] flex flex-col items-center text-center"
+            className="bg-[#474959] rounded-[20px] px-[30px] py-[40px] flex flex-col items-center text-center"
           >
             {/* Icon */}
             <Image
               src={item.icon}
               alt="Benefit icon"
-              width={140}
-              height={140}
+              width={Number(item.width)}
+              height={Number(item.height)}
               className={`object-contain w-[${item.width}px] h-[${item.height}px] `}
             />
 

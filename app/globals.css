@@ -47,4 +47,9 @@ body {
 
 /* Reusable utilities */
 .container-px { @apply px-4 sm:px-6 lg:px-8; }
-.max-w-screen { @apply max-w-7xl mx-auto; }
+
+.max-w-screen {
+  max-width: 1023px;
+  margin-left: auto;
+  margin-right: auto;
+}

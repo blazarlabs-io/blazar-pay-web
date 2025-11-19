@@ -9,7 +9,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-[#2C2D38] ">
+    <header className="sticky top-[-1px] z-40 bg-[#2C2D38] ">
       <div className="px-[25px] py-[20px] max-w-screen flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image

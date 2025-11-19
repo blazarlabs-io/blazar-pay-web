@@ -3,10 +3,11 @@ import Image from "next/image";
 
 export default function DownloadSection() {
   return (
-    <Section id="download" paddingX="px-0" className="w-full bg-white mt-[-2px] pt-[22px]">
+    <>
+    <Section id="download" className="w-full bg-white pt-[60px]">
       {/* Text */}
       <div className="text-left px-[25px]">
-        <p className="text-[22px] font-medium leading-[26px] text-[#1A1A1A]">
+        <p className="text-[22px] lg:text-[33px] lg:max-w-[630px] font-medium leading-[26px] lg:leading-[39px] text-[#1A1A1A]">
           Download the app, connect your wallet, and hold your phone near the
           terminal to complete the payment.
         </p>
@@ -19,7 +20,9 @@ export default function DownloadSection() {
         </button>
       </div>
 
-      {/* Full-width image */}
+      
+    </Section>
+    {/* Full-width image */}
       <div className="w-full">
         <Image
           src="/bl-pay-image1.jpg" 
@@ -30,6 +33,6 @@ export default function DownloadSection() {
           priority
         />
       </div>
-    </Section>
+    </>
   );
 }
