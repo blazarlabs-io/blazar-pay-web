@@ -11,7 +11,7 @@ export default function MobileNav({
 }) {
   return (
     <div
-      className={`md:hidden transition-all ${
+      className={`lg:hidden transition-all ${
         open ? "max-h-80 border-b" : "max-h-0 overflow-hidden"
       }`}
     >

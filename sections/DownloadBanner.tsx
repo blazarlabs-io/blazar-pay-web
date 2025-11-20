@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function DownloadSection() {
   return (
     <>
-    <Section id="download" className="w-full bg-white pt-[60px]">
+    <Section id="download" className="w-full bg-white mt-[-2px] lg:mt-0 pt-[60px]">
       {/* Text */}
       <div className="text-left px-[25px]">
         <p className="text-[22px] lg:text-[33px] lg:max-w-[630px] font-medium leading-[26px] lg:leading-[39px] text-[#1A1A1A]">
@@ -23,7 +23,7 @@ export default function DownloadSection() {
       
     </Section>
     {/* Full-width image */}
-      <div className="w-full">
+      <div className="w-full mt-[-2px] lg:mt-0">
         <Image
           src="/bl-pay-image1.jpg" 
           alt="Download app usage"

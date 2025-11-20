@@ -6,13 +6,13 @@ export default function Hero() {
     <>
     <Section id="home" paddingX="px-0" className="relative overflow-hidden pt-6 ">
       {/* White bottom half */}
-      {/* <div className="absolute inset-x-0 bottom-0 h-[28%] lg:h-[35%] bg-white -z-10" /> */}
+      
 
       {/* Content wrapper */}
       <div className="relative max-w-6xl mx-auto px-6 lg:px-10">
         {/* Text block */}
         <div className="relative z-10 max-w-md mb-[82px] lg:mt-[62px]">
-          <div className="flex gap-[20px] items-center">
+          <div className="hidden lg:flex gap-[20px] items-center">
             <p className="text-white text-[14px] leading-[20px] ">
               Home
             </p>
@@ -47,16 +47,16 @@ export default function Hero() {
             />
           </div>
         </div>
-
         
       </div>
     </Section>
     {/* Device image */}
+    <div className="relative">
       <div
         className="
           flex justify-center
           lg:mt-0
-          lg:absolute lg:right-0 lg:top-[150px]
+          lg:absolute lg:right-0 lg:top-[-450px]
         "
       >
         <Image
@@ -67,6 +67,8 @@ export default function Hero() {
           className="w-full lg:w-[769px] h-auto "
           priority
         />
+      </div>
+      <div className="lg:hidden absolute inset-x-0 bottom-0 h-[28%] lg:h-[35%] bg-white -z-10" />
       </div>
       </>
   );

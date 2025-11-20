@@ -1,5 +1,6 @@
 import Section from "@/components/Section";
 import Image from "next/image";
+import { text } from "stream/consumers";
 
 const steps = [
   {
@@ -8,6 +9,8 @@ const steps = [
     icon: "/icons/download-icon.svg",
     iconW: '38',
     iconH: '48',
+    horElemClassNames: 'mt-[38px] lg:mt-[50px]',
+    textClassNames: 'mt-[10px] sm:mt-[23px] lg:mt-[20px]',
   },
   {
     number: 2,
@@ -15,7 +18,9 @@ const steps = [
     icon: "/icons/account.svg",
     iconW: '46',
     iconH: '49',
-    marginT: 'mt-[-35px]'
+    divClassNames: 'mt-[-35px]',
+    horElemClassNames: 'mt-[38px] lg:mt-[50px]',
+    textClassNames: 'sm:mt-[25px] lg:mt-[15px]',
   },
   {
     number: 3,
@@ -23,7 +28,9 @@ const steps = [
     icon: "/icons/wallet.svg",
     iconW: '37',
     iconH: '38',
-    marginT: 'mt-[-35px]'
+    divClassNames: 'mt-[-35px]',
+    textClassNames: 'mt-[-20px]  sm:mt-[10px] lg:mt-[0px]',
+    horElemClassNames: 'mt-[25px] lg:mt-[30px]',
   },
   {
     number: 4,
@@ -31,7 +38,9 @@ const steps = [
     icon: "/icons/checkout.svg",
     iconW: '42',
     iconH: '44',
-    marginT: 'mt-[-35px]'
+    divClassNames: 'mt-[-35px]',
+    textClassNames: 'mt-[15px]  sm:mt-[20px] lg:mt-[15px]',
+    horElemClassNames: 'mt-[38px] lg:mt-[45px]',
   },
   {
     number: 5,
@@ -39,7 +48,9 @@ const steps = [
     icon: "/icons/phone.svg",
     iconW: '42',
     iconH: '49',
-    marginT: 'mt-[-35px]'
+    divClassNames: 'mt-[-35px]',
+    textClassNames: 'mt-[0px]  sm:mt-[15px] lg:mt-[15px]',
+    horElemClassNames: 'mt-[38px] lg:mt-[45px]',
   },
   {
     number: 6,
@@ -47,7 +58,9 @@ const steps = [
     icon: "/icons/amount.svg",
     iconW: '41',
     iconH: '28',
-    marginT: 'mt-[-35px]'
+    divClassNames: 'mt-[-35px]',
+    textClassNames: 'mt-[-10px]  sm:mt-[10px] md:mt-[25px] lg:mt-[1px]',
+    horElemClassNames: 'mt-[38px] lg:mt-[35px]',
   },
   {
     number: 7,
@@ -55,7 +68,9 @@ const steps = [
     icon: "/icons/receipt.svg",
     iconW: '40',
     iconH: '48',
-    marginT: 'mt-[-35px]'
+    divClassNames: 'mt-[-35px]',
+    textClassNames: 'mt-[10px] lg:mt-[5px]',
+    horElemClassNames: 'mt-[38px]',
   },
 ];
 
@@ -64,21 +79,21 @@ export default function HowItWorksSection() {
     <Section
       id="how-it-works"
       paddingX="px-0"
-      className="w-full bg-white mt-[-2px] pt-[60px] pb-[40px]"
+      className="w-full bg-white mt-[-2px] pt-[60px] lg:pt-[140px] pb-[40px] lg:pb-[153]"
     >
       {/* Heading */}
       <div className="px-[25px]">
-        <h2 className="text-[37px] leading-[44px] font-medium text-[#1A1A1A]">
+        <h2 className="text-[37px] lg:text-[51px] leading-[44px] lg:leading-[61px] font-medium text-[#1A1A1A]">
           How it works
         </h2>
       </div>
 
       {/* Steps */}
-      <div className="px-[25px] flex flex-col gap-[24px] mt-[50px]">
+      <div className="px-[25px] flex flex-col gap-[24px] mt-[50px] lg:mt-[100px]">
         {steps.map((step, index) => (
           <div
             key={step.number}
-            className={`flex items-stretch ${step.marginT} gap-[16px]`}
+            className={`flex items-stretch ${step.divClassNames} gap-[16px] lg:gap-[45px]`}
           >
             {/* Icon column */}
             <div className="mt-[4px]">
@@ -105,13 +120,13 @@ export default function HowItWorksSection() {
               )}
             </div>
 
-            {/* Text */}
+            {/* Text + horizontal line */}
             <div className="flex flex-col w-full">
-              <p className=" text-[21px] leading-[24px] font-medium text-[#2C2D38]">
+              <p className={`${step.textClassNames} text-[21px] lg:text-[30px] leading-[24px] lg:leading-[36px] font-medium text-[#2C2D38]`}>
                 {step.text}
               </p>
               {index < steps.length - 1 && (
-                <div className="w-full bg-[#00E6C8] h-[2px] mt-[38px]" />
+                <div className={` w-full bg-[#00E6C8] h-[2px] ${step.horElemClassNames}`} />
               )}
             </div>
           </div>
