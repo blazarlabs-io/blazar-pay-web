@@ -10,7 +10,7 @@ export default function BusinessOwnersSection() {
     >
       <div className="w-full relative">
         {/* Top Green Area */}
-        <div className=" px-[45px] pt-[60px] pb-[160px] relative overflow-visible">
+        <div className=" px-[10px] pt-[60px] pb-[160px] relative overflow-visible">
           <h2 className="text-[39px] lg:text-[75px] leading-[47px] lg:leading-[90px] font-medium text-white">
             Business owners:
           </h2>
@@ -35,7 +35,7 @@ export default function BusinessOwnersSection() {
         className="
           absolute 
           right-[0px] 
-          mt-[-331px]
+          mt-[-130px] lg:mt-[-331px]
           w-[320px] lg:w-[769px]
           h-auto z-30
           pointer-events-none 

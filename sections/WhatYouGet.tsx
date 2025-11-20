@@ -34,7 +34,7 @@ export default function WhatYouGetSection() {
       </h2>
 
       {/* Blocks */}
-      <div className="flex flex-col lg:flex-row gap-[27px] mt-[50px] px-[70px] lg:px-0 justify-between">
+      <div className="flex flex-col lg:flex-row gap-[27px] mt-[50px] px-[45px] lg:px-0 justify-between">
         {items.map((item, index) => (
           <div
             key={index}

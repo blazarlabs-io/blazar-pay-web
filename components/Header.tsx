@@ -11,38 +11,36 @@ export default function Header() {
   return (
     <header className="sticky top-[-1px] z-40 bg-[#2C2D38] ">
       <div className="px-[25px] py-[20px] max-w-screen flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/nav-logo-green-white.svg"
-            alt="Blazar Pay logo"
-            width={122} 
-            height={40} 
-            priority
-          />
-        </Link>
+        <div className="ml-0 xl:ml-[-150px]">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/nav-logo-green-white.svg"
+              alt="Blazar Pay logo"
+              width={122} 
+              height={40} 
+              priority
+            />
+          </Link>
+        </div>
 
         {/* desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden lg:flex items-center gap-6 lg:gap-[100px] text-sm font-medium text-[#00E6C8]">
+          <Link href="#download" className="hover:text-teal-600">
+            Download App
+          </Link>
           <Link href="#how-it-works" className="hover:text-teal-600">
             How it works
           </Link>
-          <Link href="#download" className="hover:text-teal-600">
-            Download
+          
+          <Link href="#what-you-get" className="hover:text-teal-600">
+            For Business Owners
           </Link>
-          <Link href="#contact" className="hover:text-teal-600">
-            Contact
-          </Link>
-          <Link
-            href="#merchant"
-            className="inline-flex rounded-xl bg-slate-900 text-white px-4 py-2"
-          >
-            Download App
-          </Link>
+          
         </nav>
 
         {/* mobile button */}
         <button
-          className="md:hidden inline-flex p-2"
+          className="lg:hidden inline-flex p-2"
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
         >
