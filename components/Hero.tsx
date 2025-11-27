@@ -13,8 +13,8 @@ export default function Hero() {
         {/* Text block */}
         <div className="relative z-10 max-w-md mb-[82px] lg:mt-[62px]">
           <div className="hidden lg:flex gap-[20px] items-center">
-            <p className="text-white text-[14px] leading-[20px] ">
-              Home
+            <p className="text-white text-[14px] leading-[20px] cursor-pointer">
+              <a href="https://www.blazarlabs.io/">Home</a>
             </p>
             <div>
               <Image

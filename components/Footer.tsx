@@ -42,9 +42,9 @@ export default function Footer() {
           </div>
           <div className="flex flex-wrap justify-center lg:justify-between gap-x-4 lg:gap-x-0.5 w-full max-w-md text-[#00E5C0] mt-2">
         
-            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="https://www.blazarlabs.io/privacy">Privacy Policy</Link>
             <span className="text-white">|</span>
-            <Link href="/terms">Terms of Use</Link>
+            <Link href="https://www.blazarlabs.io/terms">Terms of Use</Link>
       
           </div>
         </div>

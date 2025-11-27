@@ -36,7 +36,7 @@ export default function BusinessOwnersSection() {
           absolute 
           right-[0px] 
           mt-[-130px] lg:mt-[-331px]
-          w-[320px] lg:w-[769px]
+          w-[370px] lg:w-[769px]
           h-auto z-30
           pointer-events-none 
         "

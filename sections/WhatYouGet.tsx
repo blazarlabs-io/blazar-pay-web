@@ -26,15 +26,15 @@ export default function WhatYouGetSection() {
   return (
     <Section
       id="what-you-get"
-      className="w-full bg-[#2d2d38] pt-[40px] pb-[60px]"
+      className="w-full bg-[#2d2d38] pt-[40px] lg:pt-[100px] pb-[60px] lg:pb-[180px]"
     >
       {/* Title */}
-      <h2 className="text-[37px] font-medium text-[#00E6C8]">
+      <h2 className="text-[37px] lg:text-[51px] font-medium text-[#00E6C8]">
         What you get:
       </h2>
 
       {/* Blocks */}
-      <div className="flex flex-col lg:flex-row gap-[27px] mt-[50px] px-[45px] lg:px-0 justify-between">
+      <div className="flex flex-col lg:flex-row gap-[27px] mt-[50px] lg:mt-[112px] px-[45px] lg:px-0 justify-between">
         {items.map((item, index) => (
           <div
             key={index}
@@ -46,11 +46,11 @@ export default function WhatYouGetSection() {
               alt="Benefit icon"
               width={Number(item.width)}
               height={Number(item.height)}
-              className={`object-contain w-[${item.width}px] h-[${item.height}px] `}
+              className={`object-contain w-[${item.width}px] h-[${item.height}px] lg:scale-[1.2] `}
             />
 
             {/* Text */}
-            <p className="text-[17px] leading-[20px] text-white max-w-[280px] mt-[30px]">
+            <p className="text-[17px] lg:text-[30px] leading-[20px] lg:leading-[36px] text-white max-w-[280px] mt-[30px] lg:mt-[50px]">
               {item.text}
             </p>
           </div>

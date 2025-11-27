@@ -15,7 +15,7 @@ export default function DownloadSection() {
 
       {/* Button */}
       <div className="mt-[75px] flex justify-center">
-        <button className="px-10 py-[20px] text-[31px] leading-[37px] font-medium text-[#2C2D38] rounded-full bg-[#00E6C8] hover:opacity-90 transition">
+        <button className="px-10 py-[20px] mb-2 text-[31px] leading-[37px] font-medium text-[#2C2D38] rounded-full bg-[#00E6C8] hover:opacity-90 transition z-10">
           Download App
         </button>
       </div>
@@ -23,13 +23,13 @@ export default function DownloadSection() {
       
     </Section>
     {/* Full-width image */}
-      <div className="w-full mt-[-2px] lg:mt-0">
+      <div className="w-full mt-[-2px]">
         <Image
           src="/bl-pay-image1.jpg" 
           alt="Download app usage"
           width={1600}
           height={1000}
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover lg:mt-[-150px]"
           priority
         />
       </div>

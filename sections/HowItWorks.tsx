@@ -1,6 +1,5 @@
 import Section from "@/components/Section";
 import Image from "next/image";
-import { text } from "stream/consumers";
 
 const steps = [
   {
@@ -132,6 +131,7 @@ export default function HowItWorksSection() {
           </div>
         ))}
       </div>
+      <div></div>
     </Section>
   );
 }
