@@ -11,19 +11,20 @@ export default function MobileNav({
 }) {
   return (
     <div
-      className={`lg:hidden transition-all ${
-        open ? "max-h-80 border-b" : "max-h-0 overflow-hidden"
+      className={`lg:hidden transition-all mx-[25px] ${
+        open ? "max-h-80" : "max-h-0 overflow-hidden"
       }`}
     >
-      <nav className="container-px max-w-screen py-4 grid gap-3">
+      <nav className=" max-w-screen py-4 grid gap-3">
+
+        <Link href="#download" onClick={onClose}>
+          Download App
+        </Link>
         <Link href="#how-it-works" onClick={onClose}>
           How it works
         </Link>
-        <Link href="#download" onClick={onClose}>
-          Download
-        </Link>
-        <Link href="#contact" onClick={onClose}>
-          Contact
+        <Link href="#business-owners" onClick={onClose}>
+          For Business Owners
         </Link>
         
       </nav>

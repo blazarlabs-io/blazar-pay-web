@@ -32,7 +32,7 @@ export default function Header() {
             How it works
           </Link>
           
-          <Link href="#what-you-get" className="hover:text-teal-600">
+          <Link href="#business-owners" className="hover:text-teal-600">
             For Business Owners
           </Link>
           

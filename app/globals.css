@@ -39,6 +39,11 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 180px;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -52,4 +57,39 @@ body {
   max-width: 1023px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Anchor links */
+#what-you-get {
+  scroll-margin-top: 0px;
+}
+
+#business-owners {
+  scroll-margin-top: -90px;
+}
+
+#download {
+  scroll-margin-top: 0px;
+}
+
+#how-it-works {
+  scroll-margin-top: -100px;
+}
+
+@media (max-width: 768px) {
+  #what-you-get {
+    scroll-margin-top: 80px;
+  }
+
+  #business-owners {
+    scroll-margin-top: 80px;
+  }
+
+  #download {
+    scroll-margin-top: 80px;
+  }
+
+  #how-it-works {
+    scroll-margin-top: 20px;
+  }
 }
